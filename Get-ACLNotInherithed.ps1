@@ -6,12 +6,6 @@
 .DESCRIPTION
   Check files and folders permissions and list them should the value IsInerithed be set to FALSE
 
-.WARNING
-  This script was just placed into the script template and has not been tested yet by FingersOnFire.
-
-.SOURCE
-  https://community.spiceworks.com/topic/493582-list-file-permissions-that-are-not-inherited
-
 .PARAMETER <Parameter_Name>
   <Brief description of parameter input required. Repeat this attribute if required>
 
@@ -27,6 +21,8 @@
   Author:         cduff
   Creation Date:  2014-05-14
   Purpose/Change: Initial script development
+  Source : https://community.spiceworks.com/topic/493582-list-file-permissions-that-are-not-inherited
+  Warning : This script was just placed into the script template and has not been tested yet by me.
 
 .EXAMPLE
   <Example explanation goes here>
@@ -64,7 +60,8 @@ $errors = @()
 
 #-----------------------------------------------------------[Execution]------------------------------------------------------------
 
-Write-Host "Listing Files and Folders"¨
+Write-Host "Listing Files and Folders"
+
 $items = Get-ChildItem -Path $search_folder -recurse
 
 
